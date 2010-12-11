@@ -1,0 +1,17 @@
+DEBUG LOG--DATE: 02/04/2010 at 11:34:57
+---------------
+ThisElement : 0
+--- CONST in line 6 for element 0
+ThisElement : 3
+--- CONST in line 7 for element 3
+ThisElement : 6
+--- CONST in line 8 for element 6
+ORG : 9
+ThisElement : 15
+--- LABEL in line 13 for element 15
+ThisElement : 23
+--- LABEL in line 17 for element 23
+ThisElement : 27
+--- LABEL in line 20 for element 27
+ThisElement : 32
+--- CONST in line 21 for element 32

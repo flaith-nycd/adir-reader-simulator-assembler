@@ -1,0 +1,135 @@
+DEBUG LOG--DATE: 21/06/2010 at 14:59:13
+---------------
+---Filename to assemble : test_2.gs
+---Call procedure PreProcess()...
+Pre-processing...
+A:(-1)-B:AST(110)-C:22(116)-Line:4
+--------A:Key=-1 B:Key=5 C:Key78
+A:(-1)-B:ORG(110)-C:$300(116)-Line:6
+--------A:Key=-1 B:Key=0 C:Key78
+A:(-1)-B:JSR(111)-C:START(116)-Line:8
+--------A:Key=-1 B:Key=42 C:Key82
+A:(-1)-B:JSR(111)-C:COMPARE(116)-Line:9
+--------A:Key=-1 B:Key=42 C:Key82
+A:(-1)-B:RTS(111)-C:(-1)-Line:10
+--------A:Key=-1 B:Key=60 C:Key-1
+A:START(116)-B:(-1)-C:(-1)-Line:12
+--------A:Key=82 B:Key=-1 C:Key-1
+A:(-1)-B:LDX(111)-C:#$FF(116)-Line:13
+--------A:Key=-1 B:Key=44 C:Key78
+A:BOUCLE(116)-B:LDA(111)-C:$FC58,X(116)-Line:14
+--------A:Key=82 B:Key=43 C:Key78
+A:(-1)-B:STA(111)-C:DATA,X(116)-Line:15
+--------A:Key=-1 B:Key=65 C:Key82
+A:(-1)-B:DEX(111)-C:(-1)-Line:16
+--------A:Key=-1 B:Key=35 C:Key-1
+A:(-1)-B:BCC(111)-C:BOUCLE(116)-Line:17
+--------A:Key=-1 B:Key=16 C:Key82
+A:(-1)-B:RTS(111)-C:(-1)-Line:18
+--------A:Key=-1 B:Key=60 C:Key-1
+A:COMPARE(116)-B:(-1)-C:(-1)-Line:20
+--------A:Key=82 B:Key=-1 C:Key-1
+A:(-1)-B:LDX(111)-C:#$2F(116)-Line:21
+--------A:Key=-1 B:Key=44 C:Key78
+A:(-1)-B:LDA(111)-C:DATA,X(116)-Line:22
+--------A:Key=-1 B:Key=43 C:Key82
+A:(-1)-B:CMP(111)-C:#03(116)-Line:23
+--------A:Key=-1 B:Key=31 C:Key82
+A:(-1)-B:BCS(111)-C:EQGT3(116)-Line:24
+--------A:Key=-1 B:Key=17 C:Key82
+A:(-1)-B:STA(111)-C:$20(116)-Line:25
+--------A:Key=-1 B:Key=65 C:Key78
+A:(-1)-B:JMP(111)-C:DONE(116)-Line:26
+--------A:Key=-1 B:Key=41 C:Key82
+A:EQGT3(116)-B:BNE(111)-C:GT3(116)-Line:27
+--------A:Key=82 B:Key=21 C:Key82
+A:(-1)-B:STA(111)-C:$21(116)-Line:28
+--------A:Key=-1 B:Key=65 C:Key78
+A:(-1)-B:JMP(111)-C:DONE(116)-Line:29
+--------A:Key=-1 B:Key=41 C:Key82
+A:GT3(116)-B:STA(111)-C:$22(116)-Line:30
+--------A:Key=82 B:Key=65 C:Key78
+A:DONE(116)-B:RTS(111)-C:(-1)-Line:31
+--------A:Key=82 B:Key=60 C:Key-1
+A:DATA(116)-B:DS(110)-C:$FF(116)-Line:33
+--------A:Key=82 B:Key=12 C:Key78
+---Call procedure CheckIfLabelOrConst()
+ListSize(Token()) = 25
+CheckValidConst(START) : Result = 0
+CheckValidLabel(START) : Result = 0
+---ADD LABEL: [START] [12]
+---------------
+CheckValidConst(BOUCLE) : Result = 0
+CheckValidLabel(BOUCLE) : Result = 0
+---ADD LABEL: [BOUCLE] [14]
+---------------
+CheckValidConst(COMPARE) : Result = 0
+CheckValidLabel(COMPARE) : Result = 0
+---ADD LABEL: [COMPARE] [20]
+---------------
+CheckValidConst(EQGT3) : Result = 0
+CheckValidLabel(EQGT3) : Result = 0
+---ADD LABEL: [EQGT3] [27]
+---------------
+CheckValidConst(GT3) : Result = 0
+CheckValidLabel(GT3) : Result = 0
+---ADD LABEL: [GT3] [30]
+---------------
+CheckValidConst(DONE) : Result = 0
+CheckValidLabel(DONE) : Result = 0
+---ADD LABEL: [DONE] [31]
+---------------
+CheckValidConst(DATA) : Result = 0
+CheckValidLabel(DATA) : Result = 0
+---ADD LABEL: [DATA] [33]
+---------------
+---- End proc CheckIfLabelOrConst()
+---Call procedure CheckDoubleLC()
+---Call procedure MakeCleanSrc()
+---Check ARGV...
+---Call procedure Assembly()...
+---Call pass1()
+ $0300: 20 +4                    8:          JSR START           ; Absolute                         
+ $0303: 20 +11                   9:          JSR COMPARE         ; Absolute                         
+ $0306: 60                      10:          RTS                 ; Implied                          
+ $0307: A2 FF                   13:          LDX #$FF            ; Immediate                        
+ $0309: BD 58 FC                14: BOUCLE   LDA $FC58,X         ; Absolute X-Indexed               
+ $030C: 9D +18                  15:          STA DATA,X          ; Absolute X-Indexed               
+ $030F: CA                      16:          DEX                 ; Implied                          
+ $0310: 90 F7                   17:          BCC BOUCLE          ; Relative                         
+ $0312: 60                      18:          RTS                 ; Implied                          
+ $0313: A2 2F                   21:          LDX #$2F            ; Immediate                        
+ $0315: BD +11                  22:          LDA DATA,X          ; Absolute X-Indexed               
+ $0318: C9 03                   23:          CMP #03             ; Immediate                        
+ $031A: B0 +3                   24:          BCS EQGT3           ; Relative                         
+ $031C: 85 20                   25:          STA $20             ; Zero Page                        
+ $031E: 4C +5                   26:          JMP DONE            ; Absolute                         
+ $0321: D0 +3                   27: EQGT3    BNE GT3             ; Relative                         
+ $0323: 85 21                   28:          STA $21             ; Zero Page                        
+ $0325: 4C +2                   29:          JMP DONE            ; Absolute                         
+ $0328: 85 22                   30: GT3      STA $22             ; Zero Page                        
+ $032A: 60                      31: DONE     RTS                 ; Implied                          
+
+-----------------------
+
+BOUCLE       : $0309
+COMPARE      : $0313
+DATA         : $032B
+DONE         : $032A
+EQGT3        : $0321
+GT3          : $0328
+START        : $0307
+
+-----------------------
+
+MissingLabel() in line: 0008 - Label: [START]        Adress: $0307
+MissingLabel() in line: 0009 - Label: [COMPARE]      Adress: $0313
+MissingLabel() in line: 0015 - Label: [DATA]         Adress: $032B
+MissingLabel() in line: 0022 - Label: [DATA]         Adress: $032B
+MissingLabel() in line: 0024 - Label: [EQGT3]        Adress: $0321
+MissingLabel() in line: 0026 - Label: [DONE]         Adress: $032A
+MissingLabel() in line: 0027 - Label: [GT3]          Adress: $0328
+MissingLabel() in line: 0029 - Label: [DONE]         Adress: $032A
+
+-----------------------
+

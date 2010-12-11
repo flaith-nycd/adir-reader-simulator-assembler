@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 4.50 Beta 4 (Windows - x86)">
+  <section name="config">
+    <options closefiles="1" openmode="0" name="Editeur Assembler 6502"/>
+  </section>
+  <section name="data">
+    <explorer view="src\include\" pattern="0"/>
+    <log show="1"/>
+    <lastopen date="2010-05-07 19:48" user="Administrateur" host="WINXPTRUST"/>
+  </section>
+  <section name="files">
+    <file name="src\AsmEditor.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="a68ab952bec7439c298cc2d609996a3c"/>
+    </file>
+    <file name="src\include\GoScintilla.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="1c4e4ff770b6134b71b90c362e3591bb"/>
+    </file>
+    <file name="src\include\GoScintilla_HeaderFile.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="12d2c74553c6e91d089622d9747fe3b4"/>
+    </file>
+  </section>
+  <section name="targets">
+    <target name="Debug" enabled="1" default="1">
+      <inputfile value="src\AsmEditor.pb"/>
+      <outputfile value="bin\debug\asmEditor.exe"/>
+      <options xpskin="1" debug="1"/>
+      <purifier enable="1"/>
+      <temporaryexe value="source"/>
+      <debugger custom="1" type="ide"/>
+      <warnings custom="1" type="display"/>
+      <compilecount enable="1" value="17"/>
+      <buildcount enable="1" value="0"/>
+      <execonstant enable="1"/>
+    </target>
+  </section>
+</project>

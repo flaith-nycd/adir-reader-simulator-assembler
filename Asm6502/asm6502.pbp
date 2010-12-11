@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 4.50 (Windows - x86)">
+  <section name="config">
+    <options closefiles="1" openmode="0" name="Assembler 6502"/>
+    <comment>
+      Projet à intégrer au projet ADIR (Apple disk Image Reader)
+    </comment>
+  </section>
+  <section name="data">
+    <explorer view="src\include\5_PROC\" pattern="0"/>
+    <log show="1"/>
+    <lastopen date="2010-07-29 20:16" user="Administrateur" host="WINXPTRUST"/>
+  </section>
+  <section name="files">
+    <file name="src\adir_assembler.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="017002b1446d14e71a0209cfd1562c54"/>
+    </file>
+    <file name="src\include\0_Constant.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="91126c150a4e2c11458de3a4e34ced4b"/>
+    </file>
+    <file name="src\include\1_Data.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="4d1da2c51961eada00a467abae1f328a"/>
+    </file>
+    <file name="src\include\2_Structure.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="23009ad02dc8531bb5e028d1c3068481"/>
+    </file>
+    <file name="src\include\3_Global.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="6d03b267167d03e2537f98fa85cd0d05"/>
+    </file>
+    <file name="src\include\4_Macro.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="0f7442c5d1ef91c6ae2954988d434e6c"/>
+    </file>
+    <file name="src\include\5_Procedures.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="0ce5c672d425a65c47e74dc193b56eb2"/>
+    </file>
+    <file name="src\include\5_PROC\50_TestDigit.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="053ea4c323841428c7af90451a7e9b64"/>
+    </file>
+    <file name="src\include\5_PROC\51_InitDivers.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="26a3153579bb8ccb6e8e9e554c438fda"/>
+    </file>
+    <file name="src\include\5_PROC\52_Errors.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="3a04e4aaba8e58b05b4b3ebfce9c868e"/>
+    </file>
+    <file name="src\include\5_PROC\53_Tokenizer.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="4ff0c0c96ddea7bb5f705692e47196af"/>
+    </file>
+    <file name="src\include\5_PROC\54_Searching.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="740e10592644dbc103a67dde472173b4"/>
+    </file>
+    <file name="src\include\5_PROC\55_Checking.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="5934f00210c5472b2a8519217665257e"/>
+    </file>
+    <file name="src\include\5_PROC\56_Emit.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="41f0a04c67017d2f27abee182b4a178c"/>
+    </file>
+    <file name="src\include\5_PROC\57_Generate.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="9d5da47ad00feb8a93f2e60ff4d8c354"/>
+    </file>
+    <file name="src\include\5_PROC\58_Printing.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="eed4a0c3dff84289beecd4712ced1082"/>
+    </file>
+    <file name="src\include\5_PROC\59_Assembling.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="4c775242d564a012d2738f17ad2f888b"/>
+    </file>
+  </section>
+  <section name="targets">
+    <target name="Adir Assembler DEBUG" enabled="1" default="1">
+      <inputfile value="src\adir_assembler.pb"/>
+      <outputfile value="bin\debug\asm6502.exe"/>
+      <executable value="bin\debug\asm6502.exe"/>
+      <options debug="1"/>
+      <purifier enable="1"/>
+      <temporaryexe value="source"/>
+      <format exe="console" cpu="0"/>
+      <debugger custom="1" type="standalone"/>
+      <warnings custom="1" type="error"/>
+      <compilecount enable="1" value="994"/>
+      <buildcount enable="1" value="957"/>
+      <execonstant enable="1"/>
+    </target>
+    <target name="Adir Assembler RELEASE" enabled="1" default="0">
+      <inputfile value="src\adir_assembler.pb"/>
+      <outputfile value="bin\release\asm6502.exe"/>
+      <executable value="bin\release\adir_assembler.exe"/>
+      <temporaryexe value="source"/>
+      <format exe="console" cpu="0"/>
+      <compilecount enable="1" value="3"/>
+      <buildcount enable="1" value="3"/>
+      <execonstant enable="1"/>
+    </target>
+  </section>
+</project>

@@ -1,0 +1,467 @@
+Program 'apple_ii_system_monitor.gs' starting at adress : $F800 (63488)
+
+End assembly, 1926 Bytes, Errors: 45
+
+Error in line 000224: Constant value has not a valid length
+00000224 DFB   $FF,$FF,$FF
+
+Error in line 000305: Constant value has not a valid length
+00000305 FMT1     DFB   $04,$20,$54,$30,$0D
+
+Error in line 000307: Constant value has not a valid length
+00000307 DFB   $80,$04,$90,$03,$22
+
+Error in line 000309: Constant value has not a valid length
+00000309 DFB   $54,$33,$0D,$80,$04
+
+Error in line 000311: Constant value has not a valid length
+00000311 DFB   $90,$04,$20,$54,$33
+
+Error in line 000313: Constant value has not a valid length
+00000313 DFB   $0D,$80,$04,$90,$04
+
+Error in line 000315: Constant value has not a valid length
+00000315 DFB   $20,$54,$3B,$0D,$80
+
+Error in line 000317: Constant value has not a valid length
+00000317 DFB   $04,$90,$00,$22,$44
+
+Error in line 000319: Constant value has not a valid length
+00000319 DFB   $33,$0D,$C8,$44,$00
+
+Error in line 000321: Constant value has not a valid length
+00000321 DFB   $11,$22,$44,$33,$0D
+
+Error in line 000323: Constant value has not a valid length
+00000323 DFB   $C8,$44,$A9,$01,$22
+
+Error in line 000325: Constant value has not a valid length
+00000325 DFB   $44,$33,$0D,$80,$04
+
+Error in line 000327: Constant value has not a valid length
+00000327 DFB   $90,$01,$22,$44,$33
+
+Error in line 000329: Constant value has not a valid length
+00000329 DFB   $0D,$80,$04,$90
+
+Error in line 000331: Constant value has not a valid length
+00000331 DFB   $26,$31,$87,$9A ;$ZZXXXY01 INSTR'S
+
+Error in line 000349: Constant value has not a valid length
+00000349 CHAR2    DFB   $D9,$00,$D8,$A4,$A4,$00
+
+Error in line 000359: Constant value has not a valid length
+00000359 MNEML    DFB   $1C,$8A,$1C,$23,$5D,$8B
+
+Error in line 000361: Constant value has not a valid length
+00000361 DFB   $1B,$A1,$9D,$8A,$1D,$23
+
+Error in line 000363: Constant value has not a valid length
+00000363 DFB   $9D,$8B,$1D,$A1,$00,$29
+
+Error in line 000365: Constant value has not a valid length
+00000365 DFB   $19,$AE,$69,$A8,$19,$23
+
+Error in line 000367: Constant value has not a valid length
+00000367 DFB   $24,$53,$1B,$23,$24,$53
+
+Error in line 000369: Constant value has not a valid length
+00000369 DFB   $19,$A1    ;(A) FORMAT ABOVE
+
+Error in line 000370: Constant value has not a valid length
+00000370 DFB   $00,$1A,$5B,$5B,$A5,$69
+
+Error in line 000372: Constant value has not a valid length
+00000372 DFB   $24,$24    ;(B) FORMAT
+
+Error in line 000373: Constant value has not a valid length
+00000373 DFB   $AE,$AE,$A8,$AD,$29,$00
+
+Error in line 000375: Constant value has not a valid length
+00000375 DFB   $7C,$00    ;(C) FORMAT
+
+Error in line 000376: Constant value has not a valid length
+00000376 DFB   $15,$9C,$6D,$9C,$A5,$69
+
+Error in line 000378: Constant value has not a valid length
+00000378 DFB   $29,$53    ;(D) FORMAT
+
+Error in line 000379: Constant value has not a valid length
+00000379 DFB   $84,$13,$34,$11,$A5,$69
+
+Error in line 000381: Constant value has not a valid length
+00000381 DFB   $23,$A0    ;(E) FORMAT
+
+Error in line 000382: Constant value has not a valid length
+00000382 MNEMR    DFB   $D8,$62,$5A,$48,$26,$62
+
+Error in line 000384: Constant value has not a valid length
+00000384 DFB   $94,$88,$54,$44,$C8,$54
+
+Error in line 000386: Constant value has not a valid length
+00000386 DFB   $68,$44,$E8,$94,$00,$B4
+
+Error in line 000388: Constant value has not a valid length
+00000388 DFB   $08,$84,$74,$B4,$28,$6E
+
+Error in line 000390: Constant value has not a valid length
+00000390 DFB   $74,$F4,$CC,$4A,$72,$F2
+
+Error in line 000392: Constant value has not a valid length
+00000392 DFB   $A4,$8A    ;(A) FORMAT
+
+Error in line 000393: Constant value has not a valid length
+00000393 DFB   $00,$AA,$A2,$A2,$74,$74
+
+Error in line 000395: Constant value has not a valid length
+00000395 DFB   $74,$72    ;(B) FORMAT
+
+Error in line 000396: Constant value has not a valid length
+00000396 DFB   $44,$68,$B2,$32,$B2,$00
+
+Error in line 000398: Constant value has not a valid length
+00000398 DFB   $22,$00    ;(C) FORMAT
+
+Error in line 000399: Constant value has not a valid length
+00000399 DFB   $1A,$1A,$26,$26,$72,$72
+
+Error in line 000401: Constant value has not a valid length
+00000401 DFB   $88,$C8    ;(D) FORMAT
+
+Error in line 000402: Constant value has not a valid length
+00000402 DFB   $C4,$CA,$26,$48,$44,$44
+
+Error in line 000404: Constant value has not a valid length
+00000404 DFB   $A2,$C8    ;(E) FORMAT
+
+Error in line 000405: Constant value has not a valid length
+00000405 DFB   $FF,$FF,$FF
+
+
+--- LABEL           LINE
+
+A1PC                  966
+A1PCLP                968
+A1PCRTS               972
+ADD                   881
+ADDINP                845
+ADVANCE               639
+BASCALC               611
+BASCONT              1000
+BCKSPC                835
+BELL                 1058
+BELL1                 626
+BELL2                 631
+BL1                   908
+BLANK                 910
+BRANCH                505
+BREAK                 447
+BS                    654
+BSCLC2                620
+CANCEL                829
+CAPTST                842
+CHAR1                 347
+CHAR2                 349
+CHRSRCH              1090
+CHRTBL               1135
+CLEOL2                727
+CLEOLZ                726
+CLEOP1                681
+CLREOL                725
+CLREOP                679
+CLRSC2                132
+CLRSC3                135
+CLRSCR                129
+CLRTOP                131
+COUT                  898
+COUT1                 899
+COUTZ                 902
+CR                    695
+CRMON                1029
+CROUT                 849
+DATAOUT               867
+DIG                  1097
+DIV                   577
+DIV2                  578
+DIV3                  592
+DIVPM                 576
+ERR                   198
+ESC                   805
+ESC1                  668
+FMT1                  305
+FMT2                  333
+GBASCALC              141
+GBCALC                150
+GETFMT                200
+GETLN                 832
+GETLNZ                831
+GETNUM               1115
+GO                   1001
+HEADR                 751
+HLINE                 116
+HLINE1                117
+HOME                  690
+IEVEN                 193
+INIT                  535
+INITBL                516
+INPORT                979
+INPRT                 980
+INSDS1                180
+INSDS2                185
+INSTDSP               225
+IOPRT                 987
+IOPRT1                993
+IOPRT2                994
+IRQ                   439
+KEYIN                 796
+KEYIN2                799
+LF                    697
+LIST                  954
+LIST2                 956
+LT                    925
+LT2                   926
+MD1                   595
+MD3                   600
+MDRTS                 610
+MNEML                 359
+MNEMR                 382
+MNNDX1                213
+MNNDX2                216
+MNNDX3                221
+MODSCHK               863
+MON                  1081
+MONZ                 1083
+MOVE                  932
+MUL                   557
+MUL2                  558
+MUL3                  563
+MUL4                  568
+MUL5                  569
+MULPM                 556
+NBRNCH                513
+NEWPCL                482
+NOTCR                 811
+NOTCR1                827
+NXTA1                 743
+NXTA4                 740
+NXTBAS               1107
+NXTBIT               1102
+NXTBS2               1112
+NXTCHAR               838
+NXTCHR               1118
+NXTCOL                156
+NXTITM               1087
+ONEDLY                764
+OUTPORT               984
+OUTPRT                985
+PCADJ                 291
+PCADJ2                292
+PCADJ3                293
+PCADJ4                297
+PCINC2                462
+PCINC3                463
+PLOT                  102
+PLOT1                 110
+PRA1                  851
+PRADR1                257
+PRADR2                259
+PRADR3                266
+PRADR4                269
+PRADR5                272
+PRBL2                 286
+PRBL3                 287
+PRBLNK                285
+PRBYTE                886
+PREAD                 525
+PREAD2                529
+PRERR                1053
+PRHEX                 893
+PRHEXZ                894
+PRMN1                 243
+PRMN2                 245
+PRNTAX                282
+PRNTBL                230
+PRNTOP                227
+PRNTX                 283
+PRNTYX                281
+PRYX2                 853
+RD2                  1038
+RD2BIT                779
+RD3                  1043
+RDBIT                 780
+RDBYT2                771
+RDBYTE                770
+RDCHAR                807
+RDKEY                 788
+RDSP1                 494
+READ                 1033
+REGDSP                488
+REGZ                 1004
+RELADR                276
+RESET                1077
+RESTORE              1060
+RESTR1               1063
+RGDSP1                489
+RTBL                  520
+RTMASK                109
+RTMSKZ                178
+RTNJMP                484
+RTS1                  128
+RTS2                  300
+RTS2B                 636
+RTS2D                 534
+RTS3                  643
+RTS4                  667
+RTS4B                 750
+RTS4C                 873
+RTS5                  920
+SAV1                 1068
+SAVE                 1067
+SCRL1                 705
+SCRL2                 717
+SCRL3                 722
+SCRN                  168
+SCRN2                 173
+SCROLL                702
+SETCOL                159
+SETGR                 542
+SETIFLG               976
+SETINV                973
+SETKBD                978
+SETMDZ                923
+SETMODE               921
+SETNORM               975
+SETTXT                539
+SETVID                983
+SETWND                546
+STEP                  406
+STEPZ                1006
+STOADV                637
+STOR                  914
+SUBTBL               1158
+TABV                  554
+TOSUB                1127
+TRACE                1005
+UP                    659
+USR                  1008
+VFY                   937
+VFYOK                 951
+VIDOUT                644
+VLINE                 123
+VLINEZ                122
+VTAB                  663
+VTABZ                 664
+WAIT                  732
+WAIT2                 733
+WAIT3                 734
+WR1                  1012
+WRBIT                 757
+WRBYT2               1025
+WRBYTE               1024
+WRITE                1009
+WRTAPE                766
+XAM                   866
+XAM8                  858
+XAMPM                 874
+XBASIC                999
+XBRK                  453
+XJMP                  476
+XJMPAT                477
+XJSR                  468
+XQ1                   433
+XQ2                   434
+XQINIT                412
+XRTI                  456
+XRTS                  459
+ZERDLY                760
+ZMODE                1132
+
+--- CONST           LINE	VALUE
+
+A1H                    56	$3D
+A1L                    55	$3C
+A2H                    58	$3F
+A2L                    57	$3E
+A3H                    60	$41
+A3L                    59	$40
+A4H                    62	$43
+A4L                    61	$42
+A5H                    64	$45
+A5L                    63	$44
+ACC                    65	$45
+ACH                    73	$51
+ACL                    72	$50
+AUXH                   77	$55
+AUXL                   76	$54
+BAS2H                  29	$2B
+BAS2L                  28	$2A
+BASH                   27	$29
+BASIC                  99	$E000
+BASIC2                100	$E003
+BASL                   26	$28
+CH                     22	$24
+CHKSUM                 37	$2E
+COLOR                  42	$30
+CSWH                   49	$37
+CSWL                   48	$36
+CV                     23	$25
+FORMAT                 38	$2E
+GBASH                  25	$27
+GBASL                  24	$26
+H2                     30	$2C
+HIRES                  95	$C057
+HISCR                  93	$C055
+IN                     79	$0200
+INVFLG                 44	$32
+IOADR                  83	$C000
+IRQLOC                 82	$03FE
+KBD                    84	$C000
+KBDSTRB                85	$C010
+KSWH                   51	$39
+KSWL                   50	$38
+LASTIN                 39	$2F
+LENGTH                 40	$2F
+LMNEM                  31	$2C
+LOC0                   16	$00
+LOC1                   17	$01
+LORES                  94	$C056
+LOWSCR                 92	$C054
+MASK                   36	$2E
+MIXCLR                 90	$C052
+MIXSET                 91	$C053
+MODE                   43	$31
+NMI                    81	$03FB
+PADDL0                 97	$C064
+PCH                    53	$3B
+PCL                    52	$3A
+PICK                   78	$95
+PROMPT                 45	$33
+PTRIG                  98	$C070
+RMNEM                  34	$2D
+RNDH                   71	$4F
+RNDL                   70	$4E
+RTNH                   35	$2D
+RTNL                   32	$2C
+SIGN                   41	$2F
+SPKR                   87	$C030
+SPNT                   69	$49
+STATUS                 68	$48
+TAPEIN                 96	$C060
+TAPEOUT                86	$C020
+TXTCLR                 88	$C050
+TXTSET                 89	$C051
+USRADR                 80	$03F8
+V2                     33	$2D
+WNDBTM                 21	$23
+WNDLFT                 18	$20
+WNDTOP                 20	$22
+WNDWDTH                19	$21
+XQT                    54	$3C
+XQTNZ                1187	$3C
+XREG                   66	$46
+XTNDH                  75	$53
+XTNDL                  74	$52
+YREG                   67	$47
+YSAV                   46	$34
+YSAV1                  47	$35
+

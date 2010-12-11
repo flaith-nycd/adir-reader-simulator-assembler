@@ -1,0 +1,140 @@
+*********************************
+***                           ***
+***  APPLE DISK IMAGE READER  ***
+***                           ***
+*********************************
+    *************************
+    ***                   ***
+    *** DOS DISKETTE ONLY ***
+    ***    for now ;-)    ***
+    ***                   ***
+    *************************
+
+VERSIONS:
+---------
+Version 0.19.1  - 11.02.2009
+  [+] Procedure Init CPU 6502
+  [*] Modifying call to Init_ADIR for this new proc
+
+Version 0.18.0  - 10.02.2009
+  [+] Procedure to Set beginning of each type of file
+
+Version 0.17.7  - 09.02.2009
+  [*] Extracted files containing character "*" replaced by "_"
+
+Version 0.17.5  - 03.02.2009
+  [+] Adding disassembly function for command line adir
+
+Version 0.16.4  - 30.01.2009
+  [*] Adding/modifying functions for viewing files
+      All inside linked list
+      Saving file format :
+      <FILENAME>$<LCK><ORG>#<TYP>.ADIR
+      LCK = 00 or 01 (Not or Locked file)
+      TYP = TXT, BAS, INT, BIN, REL, A, B, S
+
+Version 0.13.0  - 29.12.2008
+  [*] Adding 6502 CPU (testing and not included yet)
+
+Version 0.12.8  - 26.12.2008
+  [*] Finalizing ViewFile and CheckCatFiles() functions
+
+Version 0.12.6  - 24.12.2008
+  [+] Adding the function CheckCatFiles()
+
+Version 0.11.6  - 22.12.2008
+  [+] Adding the ViewFile function
+
+Version 0.11.6  - 07.12.2008
+  [*] testing adir_test_catalog_win#3.pb
+      Still some drawings bugs :(
+
+Version 0.11.6  - 04.12.2008
+  [*] Several testing with adir_test_catalog_win#2.pb
+      I'm happy, but not enough to add it to the project
+      still need to test and correct some bugs (drawings bugs)
+
+Version 0.10.6  - 28.11.2008
+  [*] Version mode changed :
+      PUBLIC_VER      = "0"     ; still 0
+      FONCTION_ADDED  = "10"    ; #num of functions added since the beginning
+      UPDATED         = "6"     ; #num of functions updated (bugs corrected)
+  [-] ListiconGadget : back to text mode only
+
+Version 0.1.4   - 17.11.2008
+  [+] Need to change system of drawing CATALOG because of the limit of graphic
+      size inside a ListIconGadget. Limited to 64x64 for Windows, unlimited for 
+      GNU/Linux. Testing new system with adir_test_catalog_win.pb
+
+Version 0.1.3   - 16.11.2008
+  [+] Added Graphic CHAR : cf adir_gui_catalog.pb For testing
+
+Version 0.1.2   - 15.11.2008
+  [+] Added Graphics For VTOC
+
+Version 0.1.1   - 14.11.2008
+  [*] Changed CATALOG : Added check GUI Or CONSOLE
+
+Version 0.1.0   - 13.11.2008
+  [*] Starting GUI version
+
+===============================================================================
+
+MODIFY :
+--------
+03.02.2009		Still got some issue with cataloging dos_3_3.dsk (chain catalog broken)
+[DONE]26.12.2008              Must modify Add_Buffer function (got to be clean with Org & Length)
+
+===============================================================================
+
+DONE :
+------
+2) Draw VTOC            Started 10.11.08 / Finished 15.11.08
+4) View File            Started 22/12/08 / Finished 03.02.09
+
+TODO :
+------
+1) CATALOG              Started 07.11.08 / Finished __.__.__    .Make it like the "real" Apple "CATALOG"
+                                                                .Prevent user when a file is damaged (or false)
+                                                                 before trying to open it (add inside the structure)
+                                                                 => CheckCatFiles()
+2) Draw VTOC            Started 10.11.08 / Finished 15.11.08
+3) Find Bytes           Started __.__.__ / Finished __.__.__    .Use a ADIR_FindStringInBuffer(buffer, "value")
+4) View File            Started 22/12/08 / Finished 03.02.09    .For the disassembly :
+                                                                 => http://6502.org/tutorials/6502opcodes.html
+5) Make a NIBBLE disk   Started __.__.__ / Finished __.__.__    .cf Deckard => http://boutillon.free.fr/Underground/Outils/dsk2nib/dsk2nib.html
+6) Compare Disks        Started __.__.__ / Finished __.__.__
+7) Hexa Editor          Started __.__.__ / Finished __.__.__    .cf adir_hexeditor.pb and adir_screen.pb
+8) ProDOS               Started __.__.__ / Finished __.__.__
+9) 6502 Simulator       Started 29.12.08 / Finished __.__.__    .New version 0.13.0 => adir_cpu.pbi & adir_cpu.pb
+
+===============================================================================
+
+**************************
+***                    ***
+*** PRINCIPE DU NIBBLE ***
+***                    ***
+**************************
+(cf Deckard => http://boutillon.free.fr/Underground/Outils/dsk2nib/dsk2nib.html)
+
+Dans un .dsk, chaque piste ne contient que les données, á savoir 16 secteurs * 256 octets = 4096 octets ($1000).
+Une piste d'un .nib contient $1A00 octets.
+Un .dsk et un .nib contiennent tous les 2 le même nombre de piste: 35 (de la piste 0 á la piste 34).
+On remplit chaque piste du .nib á partir d'une piste du .dsk.
+Chaque piste du  .nib est alimentée de la façon suivante:
+
+a) 16 blocs correspondant chacun á un secteur du .dsk. Chaque bloc a la Structure suivante:
+
+- 40 octets de synchro (valeur = $FF)
+- 3 octets pour le marker de début du champ adresse (D5 AA 96)
+- 8 octets pour l'encodage en 4+4 du champ adresse (3 informations: piste/secteur/volume á raison de 2 octets par information)
+- 3 octets pour le marker de fin du champ adresse (DE AA EB)
+- 6 octets de synchro (valeur = $FF)
+- 3 octets pour le marker de début du champ Data (D5 AA AD)
+- 343 octets encodés en 6+2 pour les données du secteur de la piste traitée du .dsk 
+- 3 octets pour le marker de fin du champ Data (DE AA EB)
+Soit un total de 409 octets par bloc.
+
+Pour ces 16 blocs, la place occupée est de 16 * 409 octets = 6544 octets ($1990)
+
+b) Puis on complète avec 112 octets á $FF pour finir la piste.
