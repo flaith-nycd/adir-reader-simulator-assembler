@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 4.51 (Windows - x86)">
+  <section name="config">
+    <options closefiles="1" openmode="0" name="Simulateur 6502/65C02"/>
+  </section>
+  <section name="data">
+    <explorer view="src\includes\" pattern="0"/>
+    <log show="1"/>
+    <lastopen date="2011-01-21 19:52" user="Administrateur" host="WINXPTRUST"/>
+  </section>
+  <section name="files">
+    <file name="src\ADIR_Simulate.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="a65f2391b6fe63b9ca2c4a49141499b2"/>
+    </file>
+    <file name="src\includes\CONSTANT.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="b65928a4ce22a856f7246dc45af7fa6e"/>
+    </file>
+    <file name="src\includes\STRUCTURE.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="b7f3871e6092139359aab6fad337969e"/>
+    </file>
+    <file name="src\includes\GLOBAL.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="e2a24903600b3a27cf21c5fa84cbd7a5"/>
+    </file>
+    <file name="src\includes\DECLARE.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="fc679e056ac69d4ed4737d3d9c9593d6"/>
+    </file>
+    <file name="src\includes\MACRO.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="e28a1b98040834f1ea0ed3f18b1d6423"/>
+    </file>
+    <file name="src\includes\PROC_adrmode.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="b71024f0d2dc7c0776c8e854de070457"/>
+    </file>
+    <file name="src\includes\PROC_callback.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="5acffa587794f81335760353c0c657bb"/>
+    </file>
+    <file name="src\includes\PROC_dumpasm.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="5962cd961c077e22f2d42cccf993c617"/>
+    </file>
+    <file name="src\includes\PROC_execute.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="22acb36fa30330aed880d535352bc746"/>
+    </file>
+    <file name="src\includes\PROC_internal.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="3cc7374f3bb59b072b4e42b77fd2ee21"/>
+    </file>
+    <file name="src\includes\PROC_mnemonic.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="9ac87a027652797ab83bcfc527f3f202"/>
+    </file>
+    <file name="src\includes\PROC_output.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="26186c0dd3a96a02de32951a40e39bc8"/>
+    </file>
+    <file name="src\About.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0"/>
+      <fingerprint md5="5bea4c99f9bd0941f9c4cff56bd802be"/>
+    </file>
+    <file name="src\includes\PROC_disasm.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1"/>
+      <fingerprint md5="2beaf7be97428747dc1412a747260c2b"/>
+    </file>
+  </section>
+  <section name="targets">
+    <target name="Release" enabled="1" default="1">
+      <inputfile value="src\ADIR_Simulate.pb"/>
+      <outputfile value="bin\Release\ADIR_Simulate.exe"/>
+      <executable value="bin\Release\ADIR_Simulate.exe"/>
+      <temporaryexe value="source"/>
+      <format exe="console" cpu="0"/>
+      <compilecount enable="1" value="949"/>
+      <buildcount enable="1" value="52"/>
+      <execonstant enable="1"/>
+    </target>
+    <target name="Debug" enabled="1" default="0">
+      <inputfile value="src\ADIR_Simulate.pb"/>
+      <outputfile value="bin\Debug\ADIR_Simulate.exe"/>
+      <options debug="1"/>
+      <purifier enable="1"/>
+      <temporaryexe value="source"/>
+      <format exe="console" cpu="0"/>
+    </target>
+  </section>
+</project>

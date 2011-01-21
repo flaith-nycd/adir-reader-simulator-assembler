@@ -289,14 +289,14 @@ DataSection
     Data.c $30,$00,$94,$08,$50,$00,$B2,$20,$2A,$2A,$2A,$2A,$2A,$20,$53,$4F
     Data.c $55,$53,$20,$52,$4F,$55,$54,$49,$4E,$45,$20,$41,$46,$46,$49,$43
 EndDataSection
-; IDE Options = PureBasic 4.50 (Windows - x86)
+; IDE Options = PureBasic 4.51 (Windows - x86)
 ; ExecutableFormat = Console
 ; CursorPosition = 68
-; FirstLine = 15
+; FirstLine = 12
 ; Folding = -
 ; Executable = adir_cpu.exe
 ; DisableDebugger
 ; CompileSourceDirectory
-; EnableCompileCount = 2
+; EnableCompileCount = 3
 ; EnableBuildCount = 2
 ; EnableExeConstant
